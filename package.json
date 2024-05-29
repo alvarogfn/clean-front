@@ -2,17 +2,23 @@
   "name": "clean-front",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": " biome check --apply ."
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:ci": "vitest --coverage",
+    "format": "biome check --apply ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.7.3",
+    "@faker-js/faker": "^8.4.1",
     "@types/node": "^20.12.12",
+    "@vitest/coverage-v8": "^1.6.0",
+    "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.6.0"
   }
 }
