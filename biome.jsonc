@@ -4,6 +4,8 @@
     "enabled": true
   },
   "vcs": {
+    "defaultBranch": "main",
+    "root": ".",
     "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true
@@ -25,7 +27,13 @@
     "enabled": true,
     "rules": {
       "style": {
-        "useImportType": "warn"
+        "useImportType": "warn",
+        "useFilenamingConvention": {
+          "level": "warn",
+          "options": {
+            "filenameCases": ["kebab-case"]
+          }
+        }
       },
       "recommended": true
     }

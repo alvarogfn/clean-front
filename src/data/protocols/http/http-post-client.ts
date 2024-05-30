@@ -1,8 +1,10 @@
-export interface HttpPostParams {
+import type { HttpResponse } from "@/data/protocols/http/http-response";
+
+export interface HttpPostParams<T> {
   url: string;
-  body?: object;
+  body?: T;
 }
 
-export interface HttpPostClient {
-  post(params: HttpPostParams): Promise<void>;
+export interface HttpPostClient<T, R> {
+  post(params: HttpPostParams<T>): Promise<HttpResponse<R>>;
 }
