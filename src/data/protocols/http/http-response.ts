@@ -9,6 +9,5 @@ export enum HttpStatusCode {
 
 export type HttpResponse<T> = {
   statusCode: HttpStatusCode;
-  // biome-ignore lint/suspicious/noExplicitAny:
   body?: T;
 };

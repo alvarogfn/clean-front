@@ -11,7 +11,8 @@
     "useIgnoreFile": true
   },
   "files": {
-    "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.mjs", "**/*.json", "**/*.jsonc"],
+    "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.mjs", "**/*.json", "**/*.jsonc", "**/*.html"],
+    "ignore": ["public/js"],
     "ignoreUnknown": true
   },
   "formatter": {
@@ -26,6 +27,12 @@
   "linter": {
     "enabled": true,
     "rules": {
+      "correctness": {
+        "noUnusedImports": "warn",
+        "noUnusedVariables": "warn",
+        "useExhaustiveDependencies": "warn"
+      },
+      "performance": {},
       "style": {
         "useImportType": "warn",
         "useFilenamingConvention": {
