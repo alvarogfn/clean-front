@@ -1,10 +1,15 @@
 import { defineConfig } from "vite";
 import solidjs from "vite-plugin-solid";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [solidjs()],
+  plugins: [solidjs(), tsconfigPaths()],
   root: ".",
+  server: {
+    port: 3000,
+  },
   build: {
+    target: "esnext",
     rollupOptions: {
       external: ["solid-js", "axios"],
       output: {

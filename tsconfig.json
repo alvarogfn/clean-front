@@ -1,25 +1,26 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "types": ["vite/client", "vitest/globals"],
     "noEmit": true,
+    "isolatedModules": true,
     "paths": {
       "@/*": ["src/*"]
     },
     "presets": ["solid"],
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext",
-    "types": ["vitest/globals"]
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   }
 }

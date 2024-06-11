@@ -1,6 +1,7 @@
 /* @refresh reload */
+import { Router } from "@/presentation/components";
 import { render } from "solid-js/web";
 
 const root = document.getElementById("root") as HTMLDivElement;
 
-render(() => <div>oi</div>, root);
+render(() => <Router />, root);

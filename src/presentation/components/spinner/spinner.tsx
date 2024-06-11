@@ -1,15 +1,18 @@
-import type {Component, JSX} from 'solid-js'
+import type { Component, JSX } from "solid-js";
 
-import Styles from './spinner-styles.scss'
+import Styles from "./spinner.module.scss";
 
-type Props = JSX.HTMLAttributes<HTMLDivElement>
+interface Props extends JSX.HTMLAttributes<HTMLDivElement> {}
 
 const Spinner: Component<Props> = (props: Props) => {
   return (
-    <div {...props} class={[Styles.spinner, props.class].join(' ')}>
-      <div /><div /><div /><div />
+    <div {...props} class={[Styles.spinner, props.class].join(" ")}>
+      <div />
+      <div />
+      <div />
+      <div />
     </div>
-  )
-}
+  );
+};
 
-export default Spinner
+export default Spinner;
