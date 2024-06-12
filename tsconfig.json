@@ -12,7 +12,7 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["vite/client", "vitest/globals"],
+    "types": ["vite/client", "vitest/globals", "@testing-library/jest-dom"],
     "noEmit": true,
     "isolatedModules": true,
     "paths": {
