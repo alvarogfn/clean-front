@@ -1,5 +1,5 @@
-import type { Component, JSX } from "solid-js";
 import classnames from "classnames";
+import type { Component, JSX } from "solid-js";
 import Styles from "./spinner.module.scss";
 
 interface Props extends JSX.HTMLAttributes<HTMLDivElement> {}

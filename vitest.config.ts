@@ -9,8 +9,8 @@ export default defineConfig({
     globals: true,
     passWithNoTests: true,
     environmentMatchGlobs: [
-      ['**\/*.(tsx,jsx)', 'happy-dom'],
-      ['**\/*.ts', 'node'],
+      ["**/*.(tsx,jsx)", "happy-dom"],
+      ["**/*.ts", "node"],
     ],
     coverage: {
       include: ["src/**/*.{ts,tsx}"],
