@@ -7,12 +7,10 @@ import Styles from "./form-status.module.scss";
 const FormStatus = () => {
   const { state } = useContext(Context);
 
-  const { isLoading, mainError } = state;
-
   return (
     <div data-testid="error-wrap" class={Styles.errorWrap}>
-      {isLoading && <Spinner class={Styles.spinner} />}
-      {mainError && <span class={Styles.error}>{mainError}</span>}
+      {state.isLoading && <Spinner class={Styles.spinner} />}
+      {state.mainError && <span class={Styles.error}>{state.mainError}</span>}
     </div>
   );
 };

@@ -1,10 +1,10 @@
 import Context from "@/presentation/contexts/form-context";
-import {type Component, createMemo, type JSX, on, useContext} from "solid-js";
+import {type Component, createMemo, type JSX,  useContext} from "solid-js";
 import styles from "./input.module.scss";
 
 interface InputProps extends JSX.InputHTMLAttributes<HTMLInputElement> {}
 
-const Input: Component<InputProps> = (props) => {
+const  Input: Component<InputProps> = (props) => {
   const { state, setState } = useContext(Context);
 
   const error = createMemo(() => {
@@ -12,11 +12,11 @@ const Input: Component<InputProps> = (props) => {
   })
 
   const getStatus = (): string => {
-    return "🔴";
+    return error() ? "🔴" : "🟢";
   };
 
   const getTitle = (): string => {
-    return error();
+    return error() || "Tudo Certo!";
   };
 
   const handleChange: JSX.InputEventHandler<HTMLInputElement, InputEvent> = (event): void => {
