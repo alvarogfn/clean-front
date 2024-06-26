@@ -1,6 +1,6 @@
 import { makeLoginValidation } from "@/main/factories/pages/login/login-validation-factory";
 import { makeRemoteAuthentication } from "@/main/factories/usecases/authentication/remote-authentication-factory";
-import { Login } from "@/presentation/pages";
+import Login from "@/presentation/pages/login/login";
 import type { JSX } from "solid-js";
 
 export const makeLogin = (): JSX.Element => {

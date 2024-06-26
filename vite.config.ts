@@ -5,6 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [solidjs(), tsconfigPaths()],
   root: ".",
+  envPrefix: "PUBLIC",
   server: {
     port: 8080,
   },

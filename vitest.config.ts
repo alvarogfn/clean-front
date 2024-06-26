@@ -5,7 +5,6 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   plugins: [solidjs(), tsconfigPaths()],
   test: {
-    root: "src",
     globals: true,
     passWithNoTests: true,
     environmentMatchGlobs: [
@@ -13,7 +12,13 @@ export default defineConfig({
       ["**/*.ts", "node"],
     ],
     coverage: {
-      include: ["src/**/*.{ts,tsx}"],
+      reportOnFailure: true,
+      cleanOnRerun: true,
+      include: ["src/**/*"],
+      exclude: ["src/main/**/*"],
+      thresholds: {
+        perFile: true,
+      },
     },
     watch: false,
   },

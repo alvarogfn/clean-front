@@ -1,3 +1,5 @@
 export const makeApiUrl = (): string => {
-  return "https://cors-anywhere.herokuapp.com/https://fordevs.herokuapp.com/api/login";
+  console.log(import.meta.env.PUBLIC_API_URL);
+
+  return import.meta.env.PUBLIC_API_URL;
 };

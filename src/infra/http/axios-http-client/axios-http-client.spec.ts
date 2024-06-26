@@ -1,5 +1,5 @@
 import { mockPostRequest } from "@/data/tests/mock-http-post";
-import { mockAxios } from "@/infra/tests/mock-axios";
+import { mockAxios, mockHttpResponse } from "@/infra/tests/mock-axios";
 import { AxiosHttpClient } from "./axios-http-client";
 
 vi.mock("axios");
@@ -28,6 +28,23 @@ describe("AxiosHttpClient", () => {
     expect(promise).toEqual({
       body: mockedAxios.post.mock.results[1].value.data,
       statusCode: mockedAxios.post.mock.results[1].value.status,
+    });
+  });
+
+  test("Should return the correct statusCode and body on failure", async () => {
+    const { sut, mockedAxios } = makeSut();
+
+    const response = mockHttpResponse();
+
+    mockedAxios.post.mockRejectedValueOnce({
+      response,
+    });
+
+    const promise = await sut.post(mockPostRequest());
+
+    expect(promise).toEqual({
+      body: response.data,
+      statusCode: response.status,
     });
   });
 });
