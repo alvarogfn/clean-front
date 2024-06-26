@@ -1,14 +1,16 @@
-import { Login } from "@/presentation/pages";
 import { Route, Router } from "@solidjs/router";
 import type { Component } from "solid-js";
 
-const CustomRouter: Component = () => {
+interface CustomRouterProps {
+  makeLogin: Component;
+}
+
+function CustomRouter({ makeLogin }: CustomRouterProps) {
   return (
     <Router>
-      <Route path="/" component={() => <div>oi</div>} />
-      <Route path="/login" component={Login} />
+      <Route path="/login" component={makeLogin} />
     </Router>
   );
-};
+}
 
 export default CustomRouter;

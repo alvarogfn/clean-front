@@ -3,10 +3,10 @@ import { Footer, FormStatus, Input, LoginHeader } from "@/presentation/component
 import Context from "@/presentation/contexts/form-context";
 import type { Validation } from "@/presentation/protocols/validation";
 import { A, useNavigate } from "@solidjs/router";
-import { type Component, JSX, createEffect } from "solid-js";
+import type { Component, JSX } from "solid-js";
+import { createEffect } from "solid-js";
 import { createStore } from "solid-js/store";
 import styles from "./login.module.scss";
-import EventHandler = JSX.EventHandler;
 
 interface LoginProps {
   validation: Validation;
@@ -32,7 +32,7 @@ const Login: Component<LoginProps> = ({ validation, authentication }) => {
     });
   });
 
-  const handleSubmit: EventHandler<HTMLFormElement, SubmitEvent> = async (event) => {
+  const handleSubmit: JSX.EventHandler<HTMLFormElement, SubmitEvent> = async (event) => {
     try {
       event.preventDefault();
 
@@ -65,7 +65,7 @@ const Login: Component<LoginProps> = ({ validation, authentication }) => {
           <button class={styles.submit} disabled={!!state.emailError || !!state.passwordError} type="submit">
             Entrar
           </button>
-          <A href="signup" class={styles.link}>
+          <A href="/signup" class={styles.link}>
             Criar conta
           </A>
           <FormStatus />

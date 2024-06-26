@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [solidjs(), tsconfigPaths()],
   root: ".",
   server: {
-    port: 3000,
+    port: 8080,
   },
   build: {
     target: "esnext",
