@@ -1,15 +1,15 @@
 import Context from "@/presentation/contexts/form-context";
-import {type Component, createMemo, type JSX,  useContext} from "solid-js";
+import { type Component, type JSX, createMemo, useContext } from "solid-js";
 import styles from "./input.module.scss";
 
 interface InputProps extends JSX.InputHTMLAttributes<HTMLInputElement> {}
 
-const  Input: Component<InputProps> = (props) => {
+const Input: Component<InputProps> = (props) => {
   const { state, setState } = useContext(Context);
 
   const error = createMemo(() => {
     return state[`${props.name}Error`];
-  })
+  });
 
   const getStatus = (): string => {
     return error() ? "🔴" : "🟢";

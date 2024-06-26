@@ -49,9 +49,12 @@ devDependencies:
   sass:
     specifier: ^1.77.4
     version: 1.77.4
+  typescript:
+    specifier: 5.5.2
+    version: 5.5.2
   typescript-plugin-css-modules:
     specifier: ^5.1.0
-    version: 5.1.0(typescript@5.4.5)
+    version: 5.1.0(typescript@5.5.2)
   vite:
     specifier: 5.2.12
     version: 5.2.12(@types/node@20.12.12)(sass@1.77.4)
@@ -60,10 +63,13 @@ devDependencies:
     version: 2.10.2(@testing-library/jest-dom@6.4.6)(solid-js@1.8.17)(vite@5.2.12)
   vite-tsconfig-paths:
     specifier: 4.3.2
-    version: 4.3.2(typescript@5.4.5)(vite@5.2.12)
+    version: 4.3.2(typescript@5.5.2)(vite@5.2.12)
   vitest:
     specifier: 1.6.0
     version: 1.6.0(@types/node@20.12.12)(happy-dom@14.12.0)(jsdom@24.1.0)(sass@1.77.4)
+  vitest-localstorage-mock:
+    specifier: ^0.1.2
+    version: 0.1.2(vitest@1.6.0)
 
 packages:
 
@@ -2388,7 +2394,7 @@ packages:
       punycode: 2.3.1
     dev: true
 
-  /tsconfck@3.1.0(typescript@5.4.5):
+  /tsconfck@3.1.0(typescript@5.5.2):
     resolution: {integrity: sha512-CMjc5zMnyAjcS9sPLytrbFmj89st2g+JYtY/c02ug4Q+CZaAtCgbyviI0n1YvjZE/pzoc6FbNsINS13DOL1B9w==}
     engines: {node: ^18 || >=20}
     hasBin: true
@@ -2398,7 +2404,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      typescript: 5.4.5
+      typescript: 5.5.2
     dev: true
 
   /tsconfig-paths@4.2.0:
@@ -2419,7 +2425,7 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /typescript-plugin-css-modules@5.1.0(typescript@5.4.5):
+  /typescript-plugin-css-modules@5.1.0(typescript@5.5.2):
     resolution: {integrity: sha512-6h+sLBa4l+XYSTn/31vZHd/1c3SvAbLpobY6FxDiUOHJQG1eD9Gh3eCs12+Eqc+TCOAdxcO+zAPvUq0jBfdciw==}
     peerDependencies:
       typescript: '>=4.0.0'
@@ -2440,14 +2446,14 @@ packages:
       source-map-js: 1.2.0
       stylus: 0.62.0
       tsconfig-paths: 4.2.0
-      typescript: 5.4.5
+      typescript: 5.5.2
     transitivePeerDependencies:
       - supports-color
       - ts-node
     dev: true
 
-  /typescript@5.4.5:
-    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
+  /typescript@5.5.2:
+    resolution: {integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
@@ -2535,7 +2541,7 @@ packages:
       - supports-color
     dev: true
 
-  /vite-tsconfig-paths@4.3.2(typescript@5.4.5)(vite@5.2.12):
+  /vite-tsconfig-paths@4.3.2(typescript@5.5.2)(vite@5.2.12):
     resolution: {integrity: sha512-0Vd/a6po6Q+86rPlntHye7F31zA2URZMbH8M3saAZ/xR9QoGN/L21bxEGfXdWmFdNkqPpRdxFT7nmNe12e9/uA==}
     peerDependencies:
       vite: '*'
@@ -2545,7 +2551,7 @@ packages:
     dependencies:
       debug: 4.3.5
       globrex: 0.1.2
-      tsconfck: 3.1.0(typescript@5.4.5)
+      tsconfck: 3.1.0(typescript@5.5.2)
       vite: 5.2.12(@types/node@20.12.12)(sass@1.77.4)
     transitivePeerDependencies:
       - supports-color
@@ -2598,6 +2604,14 @@ packages:
         optional: true
     dependencies:
       vite: 5.2.12(@types/node@20.12.12)(sass@1.77.4)
+    dev: true
+
+  /vitest-localstorage-mock@0.1.2(vitest@1.6.0):
+    resolution: {integrity: sha512-1oee6iDWhhquzVogssbpwQi6a2F3L+nCKF2+qqyCs5tH0sOYRyTqnsfj2dtmEQiL4xtJkHLn42hEjHGESlsJHw==}
+    peerDependencies:
+      vitest: '*'
+    dependencies:
+      vitest: 1.6.0(@types/node@20.12.12)(happy-dom@14.12.0)(jsdom@24.1.0)(sass@1.77.4)
     dev: true
 
   /vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.12.0)(jsdom@24.1.0)(sass@1.77.4):

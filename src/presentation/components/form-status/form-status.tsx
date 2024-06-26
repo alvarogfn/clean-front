@@ -10,7 +10,11 @@ const FormStatus = () => {
   return (
     <div data-testid="error-wrap" class={Styles.errorWrap}>
       {state.isLoading && <Spinner class={Styles.spinner} />}
-      {state.mainError && <span class={Styles.error}>{state.mainError}</span>}
+      {state.mainError && (
+        <span data-testid="mainError" class={Styles.error}>
+          {state.mainError}
+        </span>
+      )}
     </div>
   );
 };
